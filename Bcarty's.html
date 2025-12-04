@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bcarty's Corner Store - Global Shopping to Nigeria</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#4169E1', // Royal Blue
+                            foreground: '#ffffff',
+                        },
+                        secondary: {
+                            DEFAULT: '#F59E0B', // Gold/Orange
+                            foreground: '#ffffff',
+                        },
+                        border: '#e2e8f0',
+                        input: '#e2e8f0',
+                        ring: '#4169E1',
+                        background: '#ffffff',
+                        foreground: '#020817',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="font-sans text-gray-900 antialiased bg-white">
+
+    <!-- Verified Conversion: All components included -->
+
+    <!-- Navbar -->
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-5 bg-transparent">
+        <div class="container mx-auto px-4 md:px-6 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-2">
+                <div class="bg-primary text-white p-2 rounded-lg">
+                    <i data-lucide="shopping-bag" class="w-6 h-6"></i>
+                </div>
+                <span class="text-xl font-bold tracking-tight text-primary">Bcarty's</span>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="#home" class="text-sm font-medium text-gray-700 hover:text-primary transition-colors">Home</a>
+                <a href="#how-it-works" class="text-sm font-medium text-gray-700 hover:text-primary transition-colors">How It Works</a>
+                <a href="#services" class="text-sm font-medium text-gray-700 hover:text-primary transition-colors">Services</a>
+                <a href="#categories" class="text-sm font-medium text-gray-700 hover:text-primary transition-colors">Categories</a>
+                <a href="#contact" class="text-sm font-medium text-gray-700 hover:text-primary transition-colors">Contact</a>
+                <button class="bg-secondary hover:bg-secondary/90 text-white rounded-full px-6 py-2 font-medium transition-colors">Request Order</button>
+            </nav>
+
+            <!-- Mobile Menu Toggle -->
+            <button id="mobile-menu-btn" class="md:hidden text-gray-700">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 bg-white border-t shadow-lg p-4 flex flex-col gap-4">
+            <a href="#home" class="mobile-link text-base font-medium text-gray-700 hover:text-primary py-2">Home</a>
+            <a href="#how-it-works" class="mobile-link text-base font-medium text-gray-700 hover:text-primary py-2">How It Works</a>
+            <a href="#services" class="mobile-link text-base font-medium text-gray-700 hover:text-primary py-2">Services</a>
+            <a href="#categories" class="mobile-link text-base font-medium text-gray-700 hover:text-primary py-2">Categories</a>
+            <a href="#contact" class="mobile-link text-base font-medium text-gray-700 hover:text-primary py-2">Contact</a>
+            <button class="bg-secondary hover:bg-secondary/90 text-white w-full py-2 rounded-md font-medium">Request Order</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden bg-slate-50">
+        <!-- Background Elements -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-secondary/10 rounded-full blur-3xl"></div>
+
+        <div class="container mx-auto px-4 md:px-6 relative z-10">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6 reveal">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-primary text-sm font-medium">
+                        <i data-lucide="globe" class="w-4 h-4"></i>
+                        <span>Global Shopping, Local Delivery</span>
+                    </div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-gray-900">
+                        Your Trusted Partner for <span class="text-primary">Global Shopping</span> to Nigeria
+                    </h1>
+                    <p class="text-lg text-gray-600 leading-relaxed max-w-lg">
+                        We help you purchase quality products from global stores and deliver them to your doorstep in Nigeria—fast, safe, and affordable.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                        <button class="bg-primary hover:bg-primary/90 text-white rounded-full px-8 h-12 text-base font-medium transition-colors">
+                            Request an Order
+                        </button>
+                        <button class="border border-primary text-primary hover:bg-primary/5 rounded-full px-8 h-12 text-base font-medium flex items-center justify-center gap-2 group transition-colors">
+                            Track Shipment
+                            <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+                        </button>
+                    </div>
+                    <div class="pt-8 flex flex-wrap items-center gap-8 text-sm text-gray-500">
+                        <div class="flex items-center gap-2">
+                            <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                            <span>Verified Sellers</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                            <span>Fast Delivery</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                            <span>Secure Payment</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative reveal delay-200">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
+                        <img src="https://blob.v0.app/pjtmy8OGJ.png" alt="Happy customer receiving package" class="w-full h-auto object-cover">
+                        <div class="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm p-4 rounded-xl shadow-lg border border-gray-100">
+                            <div class="flex items-center gap-4">
+                                <div class="bg-secondary/20 p-3 rounded-full text-secondary">
+                                    <i data-lucide="package" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-gray-900">Shipment Status</p>
+                                    <p class="text-sm text-gray-500">Arriving in Lagos tomorrow</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Decorative floating elements -->
+                    <div class="absolute -top-6 -right-6 bg-white p-4 rounded-xl shadow-lg animate-bounce-slow">
+                        <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-xs font-bold">USA</div>
+                    </div>
+                    <div class="absolute top-1/2 -left-8 bg-white p-4 rounded-xl shadow-lg animate-pulse">
+                        <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center text-xs font-bold">UK</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="py-20 bg-white">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">How It Works</h2>
+                <p class="text-lg text-gray-600">
+                    Shopping from international stores has never been easier. Just follow these simple steps.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+                <!-- Connecting Line (Desktop only) -->
+                <div class="hidden lg:block absolute top-12 left-0 right-0 h-0.5 bg-gray-100 -z-10 w-3/4 mx-auto"></div>
+
+                <!-- Step 1 -->
+                <div class="flex flex-col items-center text-center group reveal delay-100">
+                    <div class="w-24 h-24 bg-white border-4 border-blue-50 rounded-full flex items-center justify-center mb-6 shadow-sm group-hover:border-primary/20 group-hover:shadow-md transition-all duration-300 relative z-10">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                            <i data-lucide="shopping-cart" class="w-8 h-8"></i>
+                        </div>
+                        <div class="absolute -top-2 -right-2 w-8 h-8 bg-secondary text-white rounded-full flex items-center justify-center font-bold text-sm border-2 border-white">1</div>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Tell Us What You Want</h3>
+                    <p class="text-gray-600 leading-relaxed">Send us the product link or description from any store worldwide.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="flex flex-col items-center text-center group reveal delay-200">
+                    <div class="w-24 h-24 bg-white border-4 border-blue-50 rounded-full flex items-center justify-center mb-6 shadow-sm group-hover:border-primary/20 group-hover:shadow-md transition-all duration-300 relative z-10">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                            <i data-lucide="credit-card" class="w-8 h-8"></i>
+                        </div>
+                        <div class="absolute -top-2 -right-2 w-8 h-8 bg-secondary text-white rounded-full flex items-center justify-center font-bold text-sm border-2 border-white">2</div>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">We Buy for You</h3>
+                    <p class="text-gray-600 leading-relaxed">We source, verify, and purchase the item at the best possible price for you.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="flex flex-col items-center text-center group reveal delay-300">
+                    <div class="w-24 h-24 bg-white border-4 border-blue-50 rounded-full flex items-center justify-center mb-6 shadow-sm group-hover:border-primary/20 group-hover:shadow-md transition-all duration-300 relative z-10">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                            <i data-lucide="plane" class="w-8 h-8"></i>
+                        </div>
+                        <div class="absolute -top-2 -right-2 w-8 h-8 bg-secondary text-white rounded-full flex items-center justify-center font-bold text-sm border-2 border-white">3</div>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">We Ship to Nigeria</h3>
+                    <p class="text-gray-600 leading-relaxed">Fast air freight or sea freight depending on your preference and budget.</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="flex flex-col items-center text-center group reveal delay-400">
+                    <div class="w-24 h-24 bg-white border-4 border-blue-50 rounded-full flex items-center justify-center mb-6 shadow-sm group-hover:border-primary/20 group-hover:shadow-md transition-all duration-300 relative z-10">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                            <i data-lucide="home" class="w-8 h-8"></i>
+                        </div>
+                        <div class="absolute -top-2 -right-2 w-8 h-8 bg-secondary text-white rounded-full flex items-center justify-center font-bold text-sm border-2 border-white">4</div>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Deliver to Your Doorstep</h3>
+                    <p class="text-gray-600 leading-relaxed">Nationwide delivery to Lagos, Abuja, Port Harcourt, and other major cities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-20 bg-slate-50">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <span class="text-primary font-semibold tracking-wider uppercase text-sm">Our Services</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-4">Comprehensive Shipping Solutions</h2>
+                <p class="text-lg text-gray-600">
+                    We offer end-to-end logistics services designed to make global shopping accessible to everyone in Nigeria.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-shadow duration-300 group reveal delay-100">
+                    <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center text-primary mb-4 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                        <i data-lucide="shopping-bag" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Personal Shopping Assistance</h3>
+                    <p class="text-gray-600 leading-relaxed">We help customers buy items from Amazon, Alibaba, Temu, eBay, and other major international retailers.</p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-shadow duration-300 group reveal delay-200">
+                    <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center text-primary mb-4 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                        <i data-lucide="globe" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">International Shipping</h3>
+                    <p class="text-gray-600 leading-relaxed">Weekly shipping from USA, UK, and China to Nigeria with reliable handling and customs clearance.</p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-shadow duration-300 group reveal delay-300">
+                    <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center text-primary mb-4 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                        <i data-lucide="package-open" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Parcel Consolidation</h3>
+                    <p class="text-gray-600 leading-relaxed">Combine multiple packages from different stores into one shipment to significantly reduce shipping costs.</p>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-shadow duration-300 group reveal delay-400">
+                    <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center text-primary mb-4 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                        <i data-lucide="user-check" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Custom Orders</h3>
+                    <p class="text-gray-600 leading-relaxed">Need something specific? We buy products based on your exact request, specifications, and budget.</p>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-shadow duration-300 group reveal delay-500">
+                    <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center text-primary mb-4 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                        <i data-lucide="map-pin" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Tracking Support</h3>
+                    <p class="text-gray-600 leading-relaxed">Get real-time updates on your shipment from the moment of purchase until it reaches your doorstep.</p>
+                </div>
+
+                <!-- CTA Card -->
+                <div class="flex flex-col h-full reveal delay-600">
+                    <div class="h-full bg-primary rounded-xl p-8 flex flex-col justify-center items-center text-center text-white shadow-lg">
+                        <h3 class="text-2xl font-bold mb-4">Ready to Shop?</h3>
+                        <p class="mb-6 text-blue-100">Start your international shopping journey with us today.</p>
+                        <button class="bg-white text-primary font-bold py-3 px-8 rounded-full hover:bg-blue-50 transition-colors w-full">
+                            Get Started Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section id="categories" class="py-20 bg-white">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-4 reveal">
+                <div class="max-w-2xl">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Popular Categories</h2>
+                    <p class="text-lg text-gray-600">
+                        We help you shop from a wide range of categories across international stores.
+                    </p>
+                </div>
+                <button class="text-primary font-semibold hover:text-primary/80 flex items-center gap-2 group">
+                    View All Categories
+                    <span class="group-hover:translate-x-1 transition-transform">→</span>
+                </button>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+                <!-- Category Items -->
+                <div class="group relative rounded-xl overflow-hidden aspect-square cursor-pointer reveal delay-100">
+                    <img src="https://blob.v0.app/pjtmy8OGJ.png?query=modern electronics" alt="Electronics" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-4">
+                        <h3 class="text-white font-bold text-lg md:text-xl">Electronics</h3>
+                    </div>
+                </div>
+                <div class="group relative rounded-xl overflow-hidden aspect-square cursor-pointer reveal delay-150">
+                    <img src="https://blob.v0.app/pjtmy8OGJ.png?query=fashion clothing rack" alt="Fashion" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-4">
+                        <h3 class="text-white font-bold text-lg md:text-xl">Fashion</h3>
+                    </div>
+                </div>
+                <div class="group relative rounded-xl overflow-hidden aspect-square cursor-pointer reveal delay-200">
+                    <img src="https://blob.v0.app/pjtmy8OGJ.png?query=beauty skincare products" alt="Beauty" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-4">
+                        <h3 class="text-white font-bold text-lg md:text-xl">Beauty</h3>
+                    </div>
+                </div>
+                <div class="group relative rounded-xl overflow-hidden aspect-square cursor-pointer reveal delay-250">
+                    <img src="https://blob.v0.app/pjtmy8OGJ.png?query=modern kitchen appliances" alt="Home & Kitchen" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-4">
+                        <h3 class="text-white font-bold text-lg md:text-xl">Home & Kitchen</h3>
+                    </div>
+                </div>
+                <div class="group relative rounded-xl overflow-hidden aspect-square cursor-pointer reveal delay-300">
+                    <img src="https://blob.v0.app/pjtmy8OGJ.png?query=laptops and tech gadgets" alt="Gadgets" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-4">
+                        <h3 class="text-white font-bold text-lg md:text-xl">Gadgets</h3>
+                    </div>
+                </div>
+                <div class="group relative rounded-xl overflow-hidden aspect-square cursor-pointer reveal delay-350">
+                    <img src="https://blob.v0.app/pjtmy8OGJ.png?query=designer shoes and bags" alt="Shoes & Bags" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-4">
+                        <h3 class="text-white font-bold text-lg md:text-xl">Shoes & Bags</h3>
+                    </div>
+                </div>
+                <div class="group relative rounded-xl overflow-hidden aspect-square cursor-pointer reveal delay-400">
+                    <img src="https://blob.v0.app/pjtmy8OGJ.png?query=kids toys and games" alt="Kids" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-4">
+                        <h3 class="text-white font-bold text-lg md:text-xl">Kids</h3>
+                    </div>
+                </div>
+                <div class="group relative rounded-xl overflow-hidden aspect-square cursor-pointer reveal delay-450">
+                    <img src="https://blob.v0.app/pjtmy8OGJ.png?query=car parts and accessories" alt="Auto" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-4">
+                        <h3 class="text-white font-bold text-lg md:text-xl">Auto</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="why-choose-us" class="py-20 bg-primary text-white">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Why Choose Bcarty's?</h2>
+                <p class="text-lg text-blue-100">
+                    We go the extra mile to ensure your shopping experience is seamless and stress-free.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="flex gap-4 p-6 rounded-xl bg-white/10 backdrop-blur-sm border border-white/10 hover:bg-white/20 transition-colors reveal delay-100">
+                    <div class="shrink-0">
+                        <div class="w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-white">
+                            <i data-lucide="shield-check" class="w-6 h-6"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Trusted Service</h3>
+                        <p class="text-blue-100 leading-relaxed">Years of experience delivering packages safely to Nigeria.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4 p-6 rounded-xl bg-white/10 backdrop-blur-sm border border-white/10 hover:bg-white/20 transition-colors reveal delay-200">
+                    <div class="shrink-0">
+                        <div class="w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-white">
+                            <i data-lucide="clock" class="w-6 h-6"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Fast Shipping</h3>
+                        <p class="text-blue-100 leading-relaxed">Expedited air freight options for urgent deliveries.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4 p-6 rounded-xl bg-white/10 backdrop-blur-sm border border-white/10 hover:bg-white/20 transition-colors reveal delay-300">
+                    <div class="shrink-0">
+                        <div class="w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-white">
+                            <i data-lucide="dollar-sign" class="w-6 h-6"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Affordable Rates</h3>
+                        <p class="text-blue-100 leading-relaxed">Competitive pricing on shipping and service fees.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4 p-6 rounded-xl bg-white/10 backdrop-blur-sm border border-white/10 hover:bg-white/20 transition-colors reveal delay-400">
+                    <div class="shrink-0">
+                        <div class="w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-white">
+                            <i data-lucide="credit-card" class="w-6 h-6"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Secure Payment</h3>
+                        <p class="text-blue-100 leading-relaxed">Multiple secure payment options for your peace of mind.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4 p-6 rounded-xl bg-white/10 backdrop-blur-sm border border-white/10 hover:bg-white/20 transition-colors reveal delay-500">
+                    <div class="shrink-0">
+                        <div class="w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-white">
+                            <i data-lucide="user-check" class="w-6 h-6"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Verified Sellers</h3>
+                        <p class="text-blue-100 leading-relaxed">We only purchase from verified and reputable sellers.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4 p-6 rounded-xl bg-white/10 backdrop-blur-sm border border-white/10 hover:bg-white/20 transition-colors reveal delay-600">
+                    <div class="shrink-0">
+                        <div class="w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-white">
+                            <i data-lucide="headset" class="w-6 h-6"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Excellent Support</h3>
+                        <p class="text-blue-100 leading-relaxed">Dedicated customer support team ready to assist you.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-20 bg-slate-50">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center max-w-3xl mx-auto mb-12 reveal">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">What Our Customers Say</h2>
+                <p class="text-lg text-gray-600">
+                    Don't just take our word for it. Here's what our happy customers have to say.
+                </p>
+            </div>
+
+            <div class="max-w-5xl mx-auto relative reveal delay-200">
+                <!-- Carousel Container -->
+                <div class="overflow-hidden" id="testimonial-carousel">
+                    <div class="flex transition-transform duration-500 ease-in-out" id="carousel-track">
+                        <!-- Testimonial 1 -->
+                        <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4">
+                            <div class="bg-white p-6 rounded-xl shadow-md h-full flex flex-col">
+                                <div class="flex gap-1 mb-4 text-secondary">
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                </div>
+                                <p class="text-gray-600 mb-6 flex-grow italic">"Bcarty's Corner Store delivered my items from Amazon faster than expected. Great communication and service!"</p>
+                                <div class="flex items-center gap-3 mt-auto">
+                                    <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">C</div>
+                                    <div>
+                                        <p class="font-bold text-gray-900 text-sm">Chioma Adebayo</p>
+                                        <p class="text-xs text-gray-500">Lagos</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Testimonial 2 -->
+                        <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4">
+                            <div class="bg-white p-6 rounded-xl shadow-md h-full flex flex-col">
+                                <div class="flex gap-1 mb-4 text-secondary">
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                </div>
+                                <p class="text-gray-600 mb-6 flex-grow italic">"I've used several shipping services before, but Bcarty's is by far the most reliable. My laptop arrived in perfect condition."</p>
+                                <div class="flex items-center gap-3 mt-auto">
+                                    <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">E</div>
+                                    <div>
+                                        <p class="font-bold text-gray-900 text-sm">Emmanuel Okonkwo</p>
+                                        <p class="text-xs text-gray-500">Abuja</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Testimonial 3 -->
+                        <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4">
+                            <div class="bg-white p-6 rounded-xl shadow-md h-full flex flex-col">
+                                <div class="flex gap-1 mb-4 text-secondary">
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                </div>
+                                <p class="text-gray-600 mb-6 flex-grow italic">"Excellent customer service! They helped me find the exact shoes I wanted from a UK store that doesn't ship to Nigeria directly."</p>
+                                <div class="flex items-center gap-3 mt-auto">
+                                    <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">G</div>
+                                    <div>
+                                        <p class="font-bold text-gray-900 text-sm">Grace Nwachukwu</p>
+                                        <p class="text-xs text-gray-500">Port Harcourt</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Testimonial 4 -->
+                        <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-4">
+                            <div class="bg-white p-6 rounded-xl shadow-md h-full flex flex-col">
+                                <div class="flex gap-1 mb-4 text-secondary">
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-lucide="star" class="w-4 h-4 text-gray-300 fill-current"></i>
+                                </div>
+                                <p class="text-gray-600 mb-6 flex-grow italic">"Affordable shipping rates and very professional team. I use them for all my business inventory imports now."</p>
+                                <div class="flex items-center gap-3 mt-auto">
+                                    <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">T</div>
+                                    <div>
+                                        <p class="font-bold text-gray-900 text-sm">Tunde Bakare</p>
+                                        <p class="text-xs text-gray-500">Lagos</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Carousel Controls -->
+                <div class="flex justify-center gap-4 mt-8">
+                    <button id="prev-btn" class="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center hover:bg-gray-100 transition-colors">
+                        <i data-lucide="arrow-left" class="w-5 h-5"></i>
+                    </button>
+                    <button id="next-btn" class="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center hover:bg-gray-100 transition-colors">
+                        <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team -->
+    <section id="team" class="py-20 bg-white">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Meet Our Team</h2>
+                <p class="text-lg text-gray-600">
+                    The dedicated professionals working behind the scenes to ensure your orders arrive safely.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+                <!-- Team Member 1 -->
+                <div class="group relative reveal delay-100">
+                    <div class="relative overflow-hidden rounded-2xl aspect-[4/5] mb-6">
+                        <img src="/images/attachments-gen-images-public-professional-businessman-portrait.png" alt="Aishat Azeez" class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <div class="flex gap-4 text-white">
+                                <a href="#" class="hover:text-primary transition-colors"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+                                <a href="#" class="hover:text-primary transition-colors"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-1">Aishat Azeez</h3>
+                        <p class="text-primary font-medium mb-3">Founder & CEO</p>
+                        <p class="text-gray-600 leading-relaxed">
+                            With over 10 years in logistics, Aishat ensures that Bcarty's maintains its promise of reliability and speed.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="group relative reveal delay-200">
+                    <div class="relative overflow-hidden rounded-2xl aspect-[4/5] mb-6">
+                        <img src="/images/attachments-gen-images-public-professional-business-woman-portrait.png" alt="Lawal Zainab" class="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <div class="flex gap-4 text-white">
+                                <a href="#" class="hover:text-primary transition-colors"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+                                <a href="#" class="hover:text-primary transition-colors"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-1">Lawal Zainab</h3>
+                        <p class="text-primary font-medium mb-3">Manager</p>
+                        <p class="text-gray-600 leading-relaxed">
+                            Zainab the daily operations, ensuring that every package is tracked, verified, and delivered on time.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div class="reveal">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Get in Touch</h2>
+                    <p class="text-lg text-gray-600 mb-8">
+                        Ready to place an order or have questions about our services? Fill out the form or contact us directly.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-blue-50 p-3 rounded-lg text-primary">
+                                <i data-lucide="mail" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-900">Email Us</h3>
+                                <p class="text-gray-600">Bcartycouture@gmail.com</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="bg-blue-50 p-3 rounded-lg text-primary">
+                                <i data-lucide="phone" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-900">Call / WhatsApp</h3>
+                                <p class="text-gray-600">+234 708 219 2438</p>
+                                <p class="text-gray-600">https://wa.me/2347082192438</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="bg-blue-50 p-3 rounded-lg text-primary">
+                                <i data-lucide="clock" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-900">Business Hours</h3>
+                                <p class="text-gray-600">Monday - Friday: 9:00 AM - 7:00 PM</p>
+                                <p class="text-gray-600">Saturday: 9:00 AM - 7:00 PM</p>
+                                <p class="text-gray-600">Opened Online : 24/7</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="bg-blue-50 p-3 rounded-lg text-primary">
+                                <i data-lucide="map-pin" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-900">Location</h3>
+                                <p class="text-gray-600">London UK , Magodo Lagos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 p-8 rounded-2xl shadow-sm border border-slate-100 reveal delay-200">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Request an Order</h3>
+                    <form class="space-y-4" onsubmit="event.preventDefault(); alert('Thank you! Your request has been submitted.');">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="space-y-2">
+                                <label for="name" class="text-sm font-medium text-gray-700">Name</label>
+                                <input id="name" type="text" placeholder="Your name" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50">
+                            </div>
+                            <div class="space-y-2">
+                                <label for="phone" class="text-sm font-medium text-gray-700">Phone Number</label>
+                                <input id="phone" type="tel" placeholder="+234..." class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50">
+                            </div>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label for="email" class="text-sm font-medium text-gray-700">Email</label>
+                            <input id="email" type="email" placeholder="your@email.com" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50">
+                        </div>
+
+                        <div class="space-y-2">
+                            <label for="product" class="text-sm font-medium text-gray-700">Product Link / Name</label>
+                            <input id="product" type="text" placeholder="Paste link or product name" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50">
+                        </div>
+
+                        <div class="space-y-2">
+                            <label for="message" class="text-sm font-medium text-gray-700">Additional Details</label>
+                            <textarea id="message" placeholder="Tell us more about what you want to order (size, color, quantity, etc.)" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50 min-h-[120px]"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-primary hover:bg-primary/90 text-white h-12 text-base rounded-lg font-medium transition-colors">
+                            Submit Request
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <a href="#" class="flex items-center gap-2 mb-6">
+                        <div class="bg-primary text-white p-2 rounded-lg">
+                            <i data-lucide="shopping-bag" class="w-6 h-6"></i>
+                        </div>
+                        <span class="text-xl font-bold tracking-tight">Bcarty's</span>
+                    </a>
+                    <p class="text-gray-400 leading-relaxed mb-6">
+                        Your trusted partner for buying and shipping goods from global stores to Nigeria. Fast, safe, and reliable.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="bg-gray-800 p-2 rounded-full hover:bg-primary transition-colors">
+                            <i data-lucide="facebook" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 p-2 rounded-full hover:bg-primary transition-colors">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 p-2 rounded-full hover:bg-primary transition-colors">
+                            <i data-lucide="twitter" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#how-it-works" class="text-gray-400 hover:text-white transition-colors">How It Works</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Services</a></li>
+                        <li><a href="#categories" class="text-gray-400 hover:text-white transition-colors">Categories</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Personal Shopping</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">International Shipping</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Procurement</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Warehousing</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Contact Info</h3>
+                    <ul class="space-y-3 text-gray-400">
+                        <li>London UK , Magodo Lagos</li>
+                        <li>Bcartycouture@gmail.com</li>
+                        <li>+234 708 219 2438</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-500 text-sm">© 2025 Bcarty's Corner Store. All Rights Reserved.</p>
+                <div class="flex gap-6 text-sm text-gray-500">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
